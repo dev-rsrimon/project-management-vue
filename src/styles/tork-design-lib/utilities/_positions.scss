@@ -1,0 +1,34 @@
+$position-property-map: (
+  static: static,
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky,
+);
+
+@each $property-name, $value in $position-property-map {
+  .#{tork-position- + $property-name} {
+    position: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-position-sm- + $property-name} {
+      position: $value;
+    } 
+  }
+  @include responsiveMin(768px) {
+    .#{tork-position-md- + $property-name} {
+      position: $value;
+    } 
+  }
+  @include responsiveMin(992px) {
+    .#{tork-position-lg- + $property-name} {
+      position: $value;
+    } 
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-position-xl- + $property-name} {
+      position: $value;
+    } 
+  }
+}

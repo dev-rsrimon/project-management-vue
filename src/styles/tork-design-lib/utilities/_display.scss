@@ -1,0 +1,43 @@
+// Display property map
+$display-property-map: (
+  none: none,
+  block: block,
+  inline-block: inline-block,
+  inline: inline,
+  flex: flex,
+  inline-flex: inline-flex,
+  grid: grid
+);
+
+// Responsive display
+@each $property-name, $value in $display-property-map {
+
+  .#{tork-d- + $property-name} {
+    display: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-d-sm- + $property-name} {
+      display: $value;
+    }
+  }
+
+  @include responsiveMin(768px) {
+    .#{tork-d-md- + $property-name} {
+      display: $value;
+    }
+  }
+
+  @include responsiveMin(992px) {
+    .#{tork-d-lg- + $property-name} {
+      display: $value;
+    }
+  }
+
+  @include responsiveMin(1200px) {
+    .#{tork-d-xl- + $property-name} {
+      display: $value;
+    }
+  }
+}
+

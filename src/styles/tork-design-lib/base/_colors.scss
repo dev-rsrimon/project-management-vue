@@ -1,0 +1,13 @@
+// Text colors
+@each $name, $color in $theme-colors-map {
+  .#{tork-text- + $name} {
+    color: $color;
+  }
+}
+
+//  Background colors
+@each $name, $color in $theme-colors-map {
+  .#{tork-bg- + $name} {
+    background-color: $color;
+  }
+}

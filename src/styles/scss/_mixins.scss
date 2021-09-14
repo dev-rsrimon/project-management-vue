@@ -1,0 +1,20 @@
+@mixin bgImage() {
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+// Responsive Min width
+@mixin responsiveMin($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+// Responsive Max width
+@mixin responsiveMax($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}

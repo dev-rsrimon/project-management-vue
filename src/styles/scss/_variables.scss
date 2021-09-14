@@ -1,0 +1,35 @@
+// Fonts
+$primary-font: "Poppins", sans-serif;
+$seondary-font: "Roboto", sans-serif;
+$global-bg-color: #e2ddd3;
+
+// Solid colors
+$primary-color: #fd7b38;
+$secondary-color: #f7f6f4;
+$dark-color: #192033;
+$light-color: #f7f6f4;
+$muted-color: #e2ddd3;
+$success-color: #60b158;
+$white-color: #ffffff;
+$danger-color: #e35a5a;
+$warning-color: #ffce31;
+
+$info-color: #0075ff;
+$blue-color: #0075ff;
+
+// shadow color
+$shadow-color: rgba(0, 0, 0, 0.03);
+
+// Theme colors map
+$theme-colors-map: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  info: $info-color,
+  success: $success-color,
+  warning: $warning-color,
+  danger: $danger-color,
+  light: $light-color,
+  white: $white-color,
+  dark: $dark-color,
+  none: none,
+);

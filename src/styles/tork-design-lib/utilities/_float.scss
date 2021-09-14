@@ -1,0 +1,32 @@
+$float-property-map: (
+  left: left,
+  right: right,
+  none: none,
+);
+
+@each $property-name, $value in $float-property-map {
+  .#{tork-float- + $property-name} {
+    float: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-float-sm- + $property-name} {
+      float: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-float-md- + $property-name} {
+      float: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-float-lg- + $property-name} {
+      float: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-float-xl- + $property-name} {
+      float: $value;
+    }
+  }
+}

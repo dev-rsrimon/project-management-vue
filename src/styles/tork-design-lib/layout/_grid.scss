@@ -1,0 +1,144 @@
+.tork-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.tork-col-sm-1,
+.tork-col-sm-2,
+.tork-col-sm-3,
+.tork-col-sm-4,
+.tork-col-sm-5,
+.tork-col-sm-6,
+.tork-col-sm-7,
+.tork-col-sm-8,
+.tork-col-sm-9,
+.tork-col-sm-10,
+.tork-col-sm-11,
+.tork-col-sm-12,
+.tork-col-md-1,
+.tork-col-md-2,
+.tork-col-md-3,
+.tork-col-md-4,
+.tork-col-md-5,
+.tork-col-md-6,
+.tork-col-md-7,
+.tork-col-md-8,
+.tork-col-md-9,
+.tork-col-md-10,
+.tork-col-md-11,
+.tork-col-md-12,
+.tork-col-lg-1,
+.tork-col-lg-2,
+.tork-col-lg-3,
+.tork-col-lg-4,
+.tork-col-lg-5,
+.tork-col-lg-6,
+.tork-col-lg-7,
+.tork-col-lg-8,
+.tork-col-lg-9,
+.tork-col-lg-10,
+.tork-col-lg-11,
+.tork-col-lg-12,
+.tork-col-xl-1,
+.tork-col-xl-2,
+.tork-col-xl-3,
+.tork-col-xl-4,
+.tork-col-xl-5,
+.tork-col-xl-6,
+.tork-col-xl-7,
+.tork-col-xl-8,
+.tork-col-xl-9,
+.tork-col-xl-10,
+.tork-col-xl-11,
+.tork-col-xl-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+// Columns
+@for $i from 1 through 12 {
+  .tork-col-#{$i} {
+    flex: 0 0 (100% / 12) * $i;
+    width: (100% / 12) * $i;
+  }
+}
+
+@include responsiveMin(576px) {
+  @for $i from 1 through 12 {
+    .tork-col-sm-#{$i} {
+      flex: 0 0 (100% / 12) * $i;
+      width: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(768px) {
+  @for $i from 1 through 12 {
+    .tork-col-md-#{$i} {
+      flex: 0 0 (100% / 12) * $i;
+      width: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(992px) {
+  @for $i from 1 through 12 {
+    .tork-col-lg-#{$i} {
+      flex: 0 0 (100% / 12) * $i;
+      width: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(1200px) {
+  @for $i from 1 through 12 {
+    .tork-col-xl-#{$i} {
+      flex: 0 0 (100% / 12) * $i;
+      width: (100% / 12) * $i;
+    }
+  }
+}
+
+// column Offset
+@for $i from 1 through 12 {
+  .tork-offset-#{$i} {
+    margin-left: (100% / 12) * $i;
+  }
+}
+
+@include responsiveMin(576px) {
+  @for $i from 1 through 12 {
+    .tork-offset-sm-#{$i} {
+      margin-left: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(768px) {
+  @for $i from 1 through 12 {
+    .tork-offset-md-#{$i} {
+      margin-left: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(992px) {
+  @for $i from 1 through 12 {
+    .tork-offset-lg-#{$i} {
+      margin-left: (100% / 12) * $i;
+    }
+  }
+}
+
+@include responsiveMin(1200px) {
+  @for $i from 1 through 12 {
+    .tork-offset-xl-#{$i} {
+      margin-left: (100% / 12) * $i;
+    }
+  }
+}

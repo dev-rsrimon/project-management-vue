@@ -1,0 +1,44 @@
+$text-aligns-property-map: (
+  left: left,
+  right: right,
+  center: center,
+);
+
+$text-transform-property-map: (
+  lowercase: lowercase,
+  capitalize: capitalize,
+  uppercase: uppercase,
+);
+
+$font-weight-map: (
+  fw-700: 700,
+  fw-600: 600,
+  fw-500: 500,
+  fw-400: 400,
+  fw-300: 300,
+);
+
+// Text align
+@each $property-name, $value in $text-aligns-property-map {
+  .#{tork-text- + $property-name} {
+    text-align: $value;
+  }
+}
+
+// Text Transform
+@each $property-name, $value in $text-transform-property-map {
+  .#{tork-text- + $property-name} {
+    text-transform: $value;
+  }
+}
+
+// Font weight
+@each $property-name, $value in $font-weight-map {
+  .#{tork- + $property-name} {
+    font-weight: $value;
+  }
+}
+
+.tork-text-italic {
+  font-style: italic;
+}

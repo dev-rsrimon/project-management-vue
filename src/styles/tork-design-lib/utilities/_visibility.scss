@@ -1,0 +1,31 @@
+$visibility-property-map: (
+  visible: visible,
+  hidden: hidden,
+);
+
+@each $property-name, $value in $visibility-property-map {
+  .#{tork- + $property-name} {
+    visibility: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-sm- + $property-name} {
+      visibility: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-md- + $property-name} {
+      visibility: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-lg- + $property-name} {
+      visibility: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-xl- + $property-name} {
+      visibility: $value;
+    }
+  }
+}

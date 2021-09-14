@@ -1,0 +1,210 @@
+// Justify Property map
+$justify-property-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  space-between: space-between,
+  space-around: space-around,
+  space-evenly: space-evenly,
+);
+
+// Align map
+$align-property-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch,
+);
+
+// Direction map
+$Direction-property-map: (
+  row: row,
+  column: column,
+  row-reverse: row-reverse,
+  column-reverse: column-reverse,
+);
+// Flex wrap Map
+$wrap-property-map: (
+  flex-wrap: wrap,
+  flex-wrap-reverse: wrap-reverse,
+  flex-nowrap: nowrap,
+);
+
+// Flex Justify content
+@each $justify-name, $justify-value in $justify-property-map {
+  .#{tork-justify- + $justify-name} {
+    justify-content: $justify-value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-justify-sm- + $justify-name} {
+      justify-content: $justify-value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-justify-md- + $justify-name} {
+      justify-content: $justify-value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-justify-lg- + $justify-name} {
+      justify-content: $justify-value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-justify-xl- + $justify-name} {
+      justify-content: $justify-value;
+    }
+  }
+}
+
+// Flex Align items
+@each $align-name, $align-value in $align-property-map {
+  .#{tork-items- + $align-name} {
+    align-items: $align-value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-items-sm- + $align-name} {
+      align-items: $align-value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-items-md- + $align-name} {
+      align-items: $align-value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-items-lg- + $align-name} {
+      align-items: $align-value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-items-xl- + $align-name} {
+      align-items: $align-value;
+    }
+  }
+}
+
+// Flex Align Self
+@each $align-self-name, $align-self-value in $align-property-map {
+  .#{tork-align-self- + $align-self-name} {
+    align-self: $align-self-value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-align-self-sm- + $align-self-name} {
+      align-self: $align-self-value;
+    } 
+  }
+  @include responsiveMin(768px) {
+    .#{tork-align-self-md- + $align-self-name} {
+      align-self: $align-self-value;
+    } 
+  }
+  @include responsiveMin(992px) {
+    .#{tork-align-self-lg- + $align-self-name} {
+      align-self: $align-self-value;
+    } 
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-align-self-xl- + $align-self-name} {
+      align-self: $align-self-value;
+    } 
+  }
+}
+
+// Flex Direction
+@each $direction-name, $direction-value in $Direction-property-map {
+  .#{tork-flex- + $direction-name } {
+    flex-direction: $direction-value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-flex-sm- + $direction-name } {
+      flex-direction: $direction-value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-flex-md- + $direction-name } {
+      flex-direction: $direction-value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-flex-lg- + $direction-name } {
+      flex-direction: $direction-value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-flex-xl- + $direction-name } {
+      flex-direction: $direction-value;
+    }
+  }
+}
+
+// Flex Wrap
+@each $wrap-name, $wrap-value in $wrap-property-map {
+  .#{tork- + $wrap-name} {
+    flex-wrap: $wrap-value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-sm- + $wrap-name} {
+      flex-wrap: $wrap-value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-md- + $wrap-name} {
+      flex-wrap: $wrap-value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-lg- + $wrap-name} {
+      flex-wrap: $wrap-value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-xl- + $wrap-name} {
+      flex-wrap: $wrap-value;
+    }
+  }
+}
+
+// Flex order
+@for $flex-order from 1 through 5 {
+  .#{tork-flex-order- + $flex-order} {
+    order: $flex-order;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-flex-order-sm- + $flex-order} {
+      order: $flex-order;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-flex-order-md- + $flex-order} {
+      order: $flex-order;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-flex-order-lg- + $flex-order} {
+      order: $flex-order;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-flex-order-xl- + $flex-order} {
+      order: $flex-order;
+    }
+  }
+}
+
+// (series of sibling elements to force them into widths equal to their content width)
+.tork-flex-fill {
+  flex: 1 1 auto;
+}
+
+// (flex item’s ability to grow to fill available space the container width)
+.tork-flex-grow-1 {
+  flex-grow: 1;
+}

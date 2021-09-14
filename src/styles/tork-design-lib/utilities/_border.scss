@@ -1,0 +1,65 @@
+// Default Border
+.tork-border {
+  border: 1px solid $secondary-color;
+}
+// Border colors
+@each $border-name, $color in $theme-colors-map {
+  .#{tork-border- + $border-name} {
+    border-color: $color;
+  }
+}
+
+// Border sizing
+@for $i from 1 through 5 {
+  .#{tork-border- + $i} {
+    border-width: $i + px;
+  }
+}
+
+// Border Additive
+.tork-border-top {
+  border-top: 1px solid $secondary-color;
+}
+.tork-border-right {
+  border-top: 1px solid $secondary-color;
+}
+.tork-border-left {
+  border-left: 1px solid $secondary-color;
+}
+.tork-border-bottom {
+  border-bottom: 1px solid $secondary-color;
+}
+
+// Border Additive
+.tork-border-top-0 {
+  border-top: 0 !important;
+}
+.tork-border-right-0 {
+  border-top: 0 !important;
+}
+.tork-border-left-0 {
+  border-left: 0 !important;
+}
+.tork-border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+// Border radious
+.tork-rounded {
+  border-radius: 0.25rem;
+}
+
+.tork-rounded-circle {
+  border-radius: 50% !important;
+}
+
+.tork-rounded-pill {
+  border-radius: 50rem !important;
+}
+
+// Border radious sizing
+@for $i from 0 through 5 {
+  .#{tork-rounded- + $i} {
+    border-radius: $i * 0.25 + rem !important;
+  }
+}

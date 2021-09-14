@@ -1,0 +1,433 @@
+$margin-map: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  auto: auto
+);
+
+$padding-map: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem
+);
+
+// Margin around
+@each $spacing-name, $value in $margin-map {
+  .#{tork-m- + $spacing-name} {
+    margin: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-m-sm- + $spacing-name} {
+      margin: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-m-md- + $spacing-name} {
+      margin: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-m-lg- + $spacing-name} {
+      margin: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-m-xl- + $spacing-name} {
+      margin: $value;
+    }
+  }
+}
+
+// Margin Top
+@each $spacing-name, $value in $margin-map {
+  .#{tork-mt- + $spacing-name} {
+    margin-top: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-mt-sm- + $spacing-name} {
+      margin-top: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-mt-md- + $spacing-name} {
+      margin-top: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-mt-lg- + $spacing-name} {
+      margin-top: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-mt-xl- + $spacing-name} {
+      margin-top: $value;
+    }
+  }
+}
+
+// Margin Bottom
+@each $spacing-name, $value in $margin-map {
+  .#{tork-mb- + $spacing-name} {
+    margin-bottom: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-mb-sm- + $spacing-name} {
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-mb-md- + $spacing-name} {
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-mb-lg- + $spacing-name} {
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-mb-xl- + $spacing-name} {
+      margin-bottom: $value;
+    }
+  }
+}
+
+// Margin Left
+@each $spacing-name, $value in $margin-map {
+  .#{tork-ml- + $spacing-name} {
+    margin-left: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-ml-sm- + $spacing-name} {
+      margin-left: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-ml-md- + $spacing-name} {
+      margin-left: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-ml-lg- + $spacing-name} {
+      margin-left: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-ml-xl- + $spacing-name} {
+      margin-left: $value;
+    }
+  }
+}
+
+// Margin Right
+@each $spacing-name, $value in $margin-map {
+  .#{tork-mr- + $spacing-name} {
+    margin-right: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-mr-sm- + $spacing-name} {
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-mr-md- + $spacing-name} {
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-mr-lg- + $spacing-name} {
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-mr-xl- + $spacing-name} {
+      margin-right: $value;
+    }
+  }
+}
+
+// Margin left and right
+@each $spacing-name, $value in $margin-map {
+  .#{tork-mx- + $spacing-name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-mx-sm- + $spacing-name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-mx-md- + $spacing-name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-mx-lg- + $spacing-name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-mx-xl- + $spacing-name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+}
+
+// Margin left and right
+@each $spacing-name, $value in $margin-map {
+  .#{tork-my- + $spacing-name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-my-sm- + $spacing-name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-my-md- + $spacing-name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-my-lg- + $spacing-name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-my-xl- + $spacing-name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+}
+
+// ================Padding=======================
+
+// Padding around
+@each $spacing-name, $value in $padding-map {
+  .#{tork-p- + $spacing-name} {
+    padding: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-p-sm- + $spacing-name} {
+      padding: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-p-md- + $spacing-name} {
+      padding: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-p-lg- + $spacing-name} {
+      padding: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-p-xl- + $spacing-name} {
+      padding: $value;
+    }
+  }
+}
+
+// Margin Top
+@each $spacing-name, $value in $padding-map {
+  .#{tork-pt- + $spacing-name} {
+    padding-top: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-pt-sm- + $spacing-name} {
+      padding-top: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-pt-md- + $spacing-name} {
+      padding-top: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-pt-lg- + $spacing-name} {
+      padding-top: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-pt-xl- + $spacing-name} {
+      padding-top: $value;
+    }
+  }
+}
+
+// Padding Bottom
+@each $spacing-name, $value in $padding-map {
+  .#{tork-pb- + $spacing-name} {
+    padding-bottom: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-pb-sm- + $spacing-name} {
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-pb-md- + $spacing-name} {
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-pb-lg- + $spacing-name} {
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-pb-xl- + $spacing-name} {
+      padding-bottom: $value;
+    }
+  }
+}
+
+// Padding Left
+@each $spacing-name, $value in $padding-map {
+  .#{tork-pl- + $spacing-name} {
+    padding-left: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-pl-sm- + $spacing-name} {
+      padding-left: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-pl-md- + $spacing-name} {
+      padding-left: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-pl-lg- + $spacing-name} {
+      padding-left: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-pl-xl- + $spacing-name} {
+      padding-left: $value;
+    }
+  }
+}
+
+// Padding Right
+@each $spacing-name, $value in $padding-map {
+  .#{tork-pr- + $spacing-name} {
+    padding-right: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-pr-sm- + $spacing-name} {
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-pr-md- + $spacing-name} {
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-pr-lg- + $spacing-name} {
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-pr-xl- + $spacing-name} {
+      padding-right: $value;
+    }
+  }
+}
+
+// Padding left and right
+@each $spacing-name, $value in $padding-map {
+  .#{tork-px- + $spacing-name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-px-sm- + $spacing-name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-px-md- + $spacing-name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-px-lg- + $spacing-name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-px-xl- + $spacing-name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
+
+// Padding left and right
+@each $spacing-name, $value in $padding-map {
+  .#{tork-py- + $spacing-name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  @include responsiveMin(576px) {
+    .#{tork-py-sm- + $spacing-name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(768px) {
+    .#{tork-py-md- + $spacing-name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(992px) {
+    .#{tork-py-lg- + $spacing-name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+  @include responsiveMin(1200px) {
+    .#{tork-py-xl- + $spacing-name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+}
+

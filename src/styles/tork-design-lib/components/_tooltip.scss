@@ -1,0 +1,23 @@
+.tork-tooltip {
+  position: relative;
+  display: inline-block;
+  
+  .tork-tooltip-content {
+      visibility: hidden;
+      width: 200px;
+      text-align: center;
+      bottom: 2.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $white-color;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 0 0.125rem 0.25rem $dark-color + unquote("20");
+  }
+
+  &:hover .tork-tooltip-content {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,28 @@
+.tork-alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.tork-alert-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 1.5rem;
+}
+
+@each $color-name, $value in $theme-colors-map {
+  .#{tork-alert- + $color-name} {
+    background-color: $value + unquote('35');
+    border-color: $value + unquote('70');
+    color: $value;
+
+    .tork-alert-btn {
+      color: $value;
+    }
+  }
+}

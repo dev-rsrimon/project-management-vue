@@ -1,0 +1,12 @@
+$shadow-map: (
+  shodow-none: none,
+  shadow-sm: 0 0.125rem 0.25rem $primary-color + unquote("66"),
+  shadow: 0 0.5rem 1rem $primary-color + unquote("66"),
+  shadow-lg: 0 1rem 3rem $primary-color + unquote("66"),
+);
+
+@each $shadow-name, $value in $shadow-map {
+  .#{tork- + $shadow-name} {
+    box-shadow: $value;
+  }
+}

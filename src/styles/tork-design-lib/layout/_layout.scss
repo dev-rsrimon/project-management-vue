@@ -1,0 +1,54 @@
+.tork-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tork-container-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Responsive Container
+$responsiveMap: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+@each $deviceName, $deviceSize in $responsiveMap {
+  @if $deviceName == "sm" {
+    @include responsiveMin(576px) {
+      .tork-container {
+        max-width: $deviceSize;
+      }
+    }
+    
+  } @else if $deviceName == "md" {
+    @include responsiveMin(768px) {
+      .tork-container {
+        max-width: $deviceSize;
+      }
+    }
+
+  } @else if $deviceName == "lg" {
+    @include responsiveMin(992px) {
+      .tork-container {
+        max-width: $deviceSize;
+      }
+    }
+
+  } @else {
+    @include responsiveMin(1200px) {
+      .tork-container {
+        max-width: $deviceSize;
+      }
+    }
+  }
+}
