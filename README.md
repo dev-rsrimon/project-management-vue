@@ -1,3 +1,7 @@
+<p center>
+<img width="100%" src="https://github.com/dev-rsrimon/project-management-vue/blob/master/demo/1.png">
+</p>
+
 # axis-lms
 
 ## Project setup
