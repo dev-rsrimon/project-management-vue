@@ -2,6 +2,7 @@
   <div class="main">
     <DashboardNavbar />
     <div class="d-contents">
+      <DashboardHeader />
       <slot />
     </div>
   </div>
@@ -9,13 +10,19 @@
 
 <script>
 import DashboardNavbar from '../components/layouts/DashboardNavbar.vue'
+import DashboardHeader from '../components/layouts/DashboardHeader.vue'
 
 export default {
   components: {
     DashboardNavbar,
+    DashboardHeader
   },
   setup () {
-    
+
+
+    return {
+      
+    }
   }
 }
 </script>
@@ -23,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 .main {
   background-color: $light-color;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   margin: 25px;
   border-radius: 25px;
   padding: 30px;
@@ -33,7 +40,7 @@ export default {
 }
 
 .d-contents {
-  width: calc(1005 - 280px);
+  width: calc(100% - 280px);
   margin-left: 30px;
 }
 </style>

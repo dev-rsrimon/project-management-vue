@@ -19,14 +19,13 @@ Developer: Rs. Rimon
 }
 
 html {
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.2;
+body {  
   font-family: $primary-font;
   background-color: $global-bg-color;
 }

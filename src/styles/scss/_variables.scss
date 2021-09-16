@@ -4,21 +4,25 @@ $seondary-font: "Roboto", sans-serif;
 $global-bg-color: #e2ddd3;
 
 // Solid colors
-$primary-color: #fd7b38;
-$secondary-color: #f7f6f4;
+$primary-color: #ff722a;
+$secondary-color: #4d4f56;
 $dark-color: #192033;
 $light-color: #f7f6f4;
-$muted-color: #e2ddd3;
-$success-color: #60b158;
+$muted-color: #e8eaf2;
+$success-color: #60ac59;
 $white-color: #ffffff;
 $danger-color: #e35a5a;
 $warning-color: #ffce31;
 
+$gradient-1: linear-gradient(90deg, rgba(247,246,244,0.8939776594231442) 0%, rgba(252,148,94,0.36456589471726186) 100%); 
+
 $info-color: #0075ff;
+$purpal-color: #545dad;
 $blue-color: #0075ff;
 
 // shadow color
 $shadow-color: rgba(0, 0, 0, 0.03);
+$shadow-color-2: rgba(113, 113, 113, 0.2);
 
 // Theme colors map
 $theme-colors-map: (

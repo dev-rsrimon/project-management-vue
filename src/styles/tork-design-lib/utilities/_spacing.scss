@@ -228,7 +228,7 @@ $padding-map: (
 // Padding around
 @each $spacing-name, $value in $padding-map {
   .#{tork-p- + $spacing-name} {
-    padding: $value;
+    padding: $value !important;
   }
 
   @include responsiveMin(576px) {
